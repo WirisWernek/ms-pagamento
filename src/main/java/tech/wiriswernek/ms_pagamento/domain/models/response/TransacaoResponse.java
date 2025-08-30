@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import tech.wiriswernek.ms_pagamento.domain.models.enums.StatusTransacaoEnum;
+import tech.wiriswernek.ms_pagamento.domain.models.enums.TipoTransacaoEnum;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,5 +16,7 @@ public class TransacaoResponse {
 	private Double value;
 	private String payer;
 	private String payee;
+	private String descricao;
+	private TipoTransacaoEnum tipo;
 	private StatusTransacaoEnum status;
 }

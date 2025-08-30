@@ -16,11 +16,11 @@ public enum TipoTransacaoEnum {
 		}
 	}
 
-	public static TipoTransacaoEnum fromString(String tipo) {
+	public static TipoTransacaoEnum fromString(String tipo) throws Exception {
 		switch (tipo) {
-			case "Conta de Pagamento":
+			case "CONTA_PAGAMENTO":
 				return CONTA_PAGAMENTO;
-			case "Compra na Loja":
+			case "COMPRA_LOJA":
 				return COMPRA_LOJA;
 			default:
 				throw new IllegalArgumentException("Tipo de Transação Desconhecido: " + tipo);

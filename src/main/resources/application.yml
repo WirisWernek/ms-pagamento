@@ -24,8 +24,19 @@ server:
 logging:
   file:
     name: log/appfile.log
+    max-size: 10MB
+    max-history: 10
+
+# Configurações para melhorar o gerenciamento de memória
 management:
   endpoints:
     web:
       exposure:
-        include: ["routes"]
+        include: health,info,metrics,heapdump
+  endpoint:
+    health:
+      show-details: always
+
+# Configuração do OpenAPI/Swagger para evitar recursões
+
+
